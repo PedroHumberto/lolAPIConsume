@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "nXwAwchW2ag+3jgi3JBxpt9HFv5ETb05rqkItlNZ6Jc=",
+  "Source": "lol_consumingAPI",
+  "BasePath": "_content/lol_consumingAPI",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
