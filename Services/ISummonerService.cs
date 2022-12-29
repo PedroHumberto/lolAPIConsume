@@ -1,5 +1,3 @@
-
-
 using lol_consumingAPI.Models;
 
 namespace lol_consumingAPI.Services

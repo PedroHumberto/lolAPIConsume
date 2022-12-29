@@ -7,7 +7,10 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 
-builder.Services.AddHttpClient("LoLApi", client => {
+
+//HTTPFactory
+builder.Services.AddHttpClient("LoLApi", client =>
+{
     client.BaseAddress = new Uri("https://br1.api.riotgames.com/");
 });
 

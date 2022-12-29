@@ -29,12 +29,11 @@ namespace lol_consumingAPI.Controllers
         }
 
         [HttpGet("{summonerName}/championsBestChoices")]
-        public async Task<IActionResult> GetChampion(string summonerId = "WZ4STAyOsQcF862Vw60M0UiPTfOvTIKrV7xDtzuUexeoX6Q", string summonerName = "thomasbatard")
+        public async Task<IActionResult> GetChampion(string summonerId = "WZ4STAyOsQcF862Vw60M0UiPTfOvTIKrV7xDtzuUexeoX6Q", GetSummoner())
         {
             List<Champion> champions = await _championService.getChampion(summonerId);
 
             Summoner summoner = await _summonerService.getSummoner(summonerName);
-
 
             List<SummonerBestChoices> bestChoices = new List<SummonerBestChoices>();
 
@@ -42,6 +41,7 @@ namespace lol_consumingAPI.Controllers
             {
                 if (champion.championLevel > 4)
                 {
+                    //Try to use a map lib to parse that.
                     bestChoices.Add(new SummonerBestChoices()
                     {
                         SummonarName = summonerName,
@@ -52,7 +52,6 @@ namespace lol_consumingAPI.Controllers
                     });
                 }
             }
-
             return Ok(bestChoices);
         }
 

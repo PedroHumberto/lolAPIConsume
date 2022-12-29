@@ -1,5 +1,3 @@
-
-
 using lol_consumingAPI.Models;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
@@ -16,7 +14,7 @@ namespace lol_consumingAPI.Services
 
         public async Task<Summoner> getSummoner(string summonerName)
         {
-            Summoner summoner = new Summoner();
+            Summoner? summoner = new Summoner();
             try
             {
                 string URL_PATH = $"lol/summoner/v4/summoners/by-name/{summonerName}?api_key={Constants.API_KEY}";

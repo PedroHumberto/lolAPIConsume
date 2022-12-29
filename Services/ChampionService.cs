@@ -1,5 +1,3 @@
-
-
 using lol_consumingAPI.Models;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
@@ -18,7 +16,7 @@ namespace lol_consumingAPI.Services
             List<Champion> champion = new List<Champion>();
             try
             {
-                
+
                 string URL_PATH = $"/lol/champion-mastery/v4/champion-masteries/by-summoner/{summonerId}?api_key={Constants.API_KEY}";
 
                 using HttpResponseMessage response = await _client.GetAsync(URL_PATH);
