@@ -28,8 +28,10 @@ namespace lol_consumingAPI.Controllers
             return Ok(summoner);
         }
 
+
+        //NEED TO DO AS A POST, AND THEN GET FROM DB THE BEST CHOICES, FOR NOW I WILL DO THAT FOR TESTS. LATTER I WILL POST THE BEST CHOICE AND THEN GET THE BESTCHOICE FROM _CONTEXT
         [HttpGet("{summonerName}/championsBestChoices")]
-        public async Task<IActionResult> GetChampion(string summonerId = "WZ4STAyOsQcF862Vw60M0UiPTfOvTIKrV7xDtzuUexeoX6Q", GetSummoner())
+        public async Task<IActionResult> GetBestChoices(string summonerId = "WZ4STAyOsQcF862Vw60M0UiPTfOvTIKrV7xDtzuUexeoX6Q", summonerName = "thomasbatard")
         {
             List<Champion> champions = await _championService.getChampion(summonerId);
 

@@ -1,4 +1,3 @@
-
 namespace lol_consumingAPI.Services
 {
     public class Constants
